@@ -25,6 +25,30 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+  <!-- 1) Tailwind 설정을 전역(window.tailwind.config)에 기록 -->
+  <script>
+    window.tailwind = window.tailwind || {};
+    window.tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#FFF7ED',
+            card: '#FFFBEB',
+            border: '#F5D0A9',
+            primary: { DEFAULT: '#F97316', 600: '#EA580C', foreground: '#FFFFFF' },
+            'muted-foreground': '#6B7280'
+          },
+          boxShadow: {
+            soft: '0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.10)'
+          },
+          borderRadius: { xl: '12px' }
+        }
+      }
+    };
+  </script>
+
+  <!-- 2) Tailwind CDN (반드시 config 다음) -->
+  <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
